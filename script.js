@@ -7,11 +7,11 @@ document.getElementById("currentDay").innerHTML = jumboTime;
 
 //gives the colored backgrounds according to time of day 
 $(".time-block").each(function(){
-    const hour = parseInt($(this).attr("id"));
+    const blockTime = parseInt($(this).attr("id"));
 
-    if (currentTime < hour){
+    if (currentTime < blockTime){
         $(this).addclass("future");
-    } else if (currentTime === hour){
+    } else if (currentTime === blockTime){
 
         $(this).addClass("present");
     } else {
